@@ -19,7 +19,7 @@ const ActionCard = () => {
       <Text style={styles.headingText}>Blog Card</Text>
       <View style={[styles.headingText, styles.cardElevation]}>
         <View style={styles.headingContainer}>
-          <Text style={styles.headerContainer}>
+          <Text style={styles.headerText}>
             Nebula is an important feature in space
           </Text>
         </View>
@@ -28,7 +28,7 @@ const ActionCard = () => {
           style={styles.cardImage}
         />
         <View style={styles.cardBody}>
-          <Text numberOfLines={3} style={styles.cardDescription}>
+          <Text numberOfLines={6} style={styles.cardDescription}>
             A nebula is a giant cloud of dust and gas in space. Some nebulae
             (more than one nebula) come from the gas and dust thrown out by the
             explosion of a dying star, such as a supernova. Other nebulae are
@@ -39,7 +39,6 @@ const ActionCard = () => {
         <View style={styles.footerContainer}>
           <TouchableOpacity
             onPress={() => openWebsite("https://en.wikipedia.org/wiki/Nebula")}
-            style={styles.footerContainer}
           >
             <Text style={styles.socialLinks}>Read More</Text>
           </TouchableOpacity>
@@ -48,7 +47,7 @@ const ActionCard = () => {
               openWebsite("https://www.linkedin.com/in/mohan-ram-tr/")
             }
           >
-            <Text style={styles.socialLinks}>Follow me for more</Text>
+            <Text style={styles.socialLinks}>Follow me</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -64,24 +63,38 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     paddingHorizontal: 10,
   },
+  headerText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+  },
   card: {
-    width: 300,
-    height: 390,
-    borderRadius: 6,
+    width: 350,
+    height: 500,
+
     marginVertical: 12,
     marginHorizontal: 16,
   },
-  headingContainer: {},
-  headerContainer: {},
+
   cardElevation: {
-    backgroundColor: "#FFFFFF",
-    color: "#000000",
-    elevation: 3,
+    color: "#FFFFFF",
+    elevation: 5,
     shadowOffset: {
-      width: 1,
-      height: 1,
+      width: 5,
+      height: 5,
     },
+    shadowColor: "#333",
+    backgroundColor: "purple",
+    borderRadius: 6,
   },
+
+  headingContainer: {
+    height: 40,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
   cardImage: {
     height: 180,
     width: "100%",
@@ -89,17 +102,25 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 6,
     borderTopLeftRadius: 6,
   },
-  cardBody: {
-    flex: 1,
-    flexGrow: 1,
-    paddingHorizontal: 12,
-  },
+  cardBody: {},
   cardDescription: {
-    color: "#242B2E",
+    color: "white",
     fontSize: 12,
     marginBottom: 8,
     textAlign: "justify",
   },
-  footerContainer: {},
-  socialLinks: {},
+  footerContainer: {
+    padding: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+  },
+  socialLinks: {
+    fontSize: 16,
+    color: "#000000",
+    backgroundColor: "#FFF",
+    paddingHorizontal: 20,
+    paddingVertical: 6,
+    borderRadius: 6,
+  },
 });
