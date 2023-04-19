@@ -27,7 +27,7 @@ const ActionCard = () => {
           source={require("../assets/images/northernLights.jpg")}
           style={styles.cardImage}
         />
-        <View style={styles.cardBody}>
+        <View>
           <Text numberOfLines={6} style={styles.cardDescription}>
             A nebula is a giant cloud of dust and gas in space. Some nebulae
             (more than one nebula) come from the gas and dust thrown out by the
@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
   },
   headerText: {
     color: "white",
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: "600",
   },
   card: {
-    width: 350,
-    height: 500,
+    width: 300,
+    height: 400,
 
     marginVertical: 12,
     marginHorizontal: 16,
@@ -102,7 +102,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 6,
     borderTopLeftRadius: 6,
   },
-  cardBody: {},
   cardDescription: {
     color: "white",
     fontSize: 12,
@@ -116,7 +115,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   socialLinks: {
-    fontSize: 16,
+    fontSize: 12,
     color: "#000000",
     backgroundColor: "#FFF",
     paddingHorizontal: 20,
